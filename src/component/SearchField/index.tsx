@@ -1,13 +1,23 @@
 import React from "react";
-
+import "./index.scss";
 interface Props {
-  text: String;
+  placeholder?: string;
+  onKeyUp?: (e: any) => any;
 }
 
-export const SearchField: React.FC<Props> = () => {
+const SearchField = ({
+  placeholder = "search",
+  onKeyUp = (e) => {},
+}: Props) => {
   return (
-    <div>
-      <div>Sup Madafaka</div>
+    <div className="search-field">
+      <input
+        className="search-box"
+        placeholder={placeholder}
+        onKeyUp={onKeyUp}
+      ></input>
     </div>
   );
 };
+
+export default SearchField;

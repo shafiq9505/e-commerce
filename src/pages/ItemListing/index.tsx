@@ -20,7 +20,11 @@ const ItemListing = () => {
             return (
               <div className="item-list-container" key={index}>
                 <div className="image-container">
-                  <img src={data.imageUrl} />
+                  <img
+                    className="image"
+                    src={data.image}
+                    alt={`${data.name} image`}
+                  />
                 </div>
                 <div className="text-container">{data.name}</div>
                 <div className="button-container">
